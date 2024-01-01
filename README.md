@@ -4,6 +4,10 @@ This Repository introduces a simple script and GUI program to accept the paramet
 
 **The project is still in the phase of the proof of concept :) , it will be updated frequently.**
 
+## Copyright
+
+© 2016 El-ARABY Research and Development Center. All Rights Reserved.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -104,3 +108,5 @@ This will create a `dist` directory containing the executable file.
 ## Authors
 
 - [Abdelrahman El Sayed](https://github.com/python_arch)
+
+
