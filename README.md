@@ -2,7 +2,7 @@
 
 This Repository introduces a simple script and GUI program to accept the parameters needed for the header file generated for the ESP32 microcontroller in the IOT project. 
 
-# The project is still in the phase of the proof of concept :) , it will be updated frequently.
+**The project is still in the phase of the proof of concept :) , it will be updated frequently.**
 
 ## Getting Started
 
