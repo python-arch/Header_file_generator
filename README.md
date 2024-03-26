@@ -1,6 +1,6 @@
-# Header File Generator
+# Tornado Flusher
 
-This Repository introduces a simple script and GUI program to accept the parameters needed for the header file generated for the ESP32 microcontroller in the IOT project. 
+Tornado Flasher is a PyQt5 application for generating headers and uploading code to ESP32 devices. This application is designed to simplify the process of configuring IoT devices, specifically for Azure IoT Hub, by generating necessary header files and handling the compilation and uploading of Arduino code to ESP32 devices.
 
 **The project is still in the phase of the proof of concept :) , it will be updated frequently.**
 
@@ -104,6 +104,29 @@ Explain how to use PyInstaller to build the script into an executable.
    ```
 
 This will create a `dist` directory containing the executable file.
+
+To create a README file for your PyQt5 application, you can provide an overview of the application, its features, and how to use it. Here's an example README for your `HeaderGeneratorApp`:
+
+---
+
+# Tornado Flasher (No_EXCEL Version)
+
+## Features
+- **Brand, Product, and Model Selection**: Select the brand, product, and model of the IoT device.
+- **Compile and Upload**: Compile and upload Arduino code to the selected device.
+- **Azure IoT Hub Configuration**: Automatically configure devices with Azure IoT Hub using X.509 authentication.
+- **Customizable Header Generation**: Generate custom header files for IoT device configuration.
+
+## Installation
+1. Clone the repository: `git clone https://github.com/python-arch/Header_file_generator.git`
+2. Install the required dependencies
+3. Run the application: `python main.py`
+
+## Usage
+1. Select the brand, product, and model of the IoT device from the dropdown menus.
+2. Click the "Compile and Upload" button to flash the device.
+3. Follow the on-screen instructions to complete the flashing process.
+4. If an error occurs during flashing, click the "Skip this device" button to proceed to the next device.
 
 ## Authors
 
