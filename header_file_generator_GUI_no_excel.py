@@ -33,16 +33,13 @@ class HeaderGeneratorApp(QWidget):
         self.model_entry.addItem("Item1")
         self.model_entry.addItem("Item2")
         
-        self.quantity_label = QLabel("Quantity")
-        self.quantity_entry = QLineEdit(self)
-        self.quantity_entry.setPlaceholderText("Enter number of esp...")
 
         self.image_label = QLabel()
         self.load_image()
 
         # handling the flashing of code
         self.compile_button = QPushButton("Compile and Upload", self)
-        self.compile_button.clicked.connect(self.process_devices)
+        self.compile_button.clicked.connect(self.flash_device)
 
         self.next_button = QPushButton("Skip this device", self)
         self.next_button.clicked.connect(self.next_button_clicked)
@@ -58,28 +55,12 @@ class HeaderGeneratorApp(QWidget):
         self.layout.addWidget(self.image_label)
         self.layout.addWidget(self.compile_button)
         self.layout.addWidget(self.next_button)
-        self.layout.addWidget(self.quantity_entry)
 
         self.setLayout(self.layout)
-        
-    def process_devices(self):
-        quantity = int(self.quantity_entry.text())
-        self.process_device(quantity)
-
-    def process_device(self, quantity):
-        self.quantity_remaining = quantity
-        self.device_flashing_timer = QTimer(self)
-        self.device_flashing_timer.timeout.connect(self.flash_device)
-        self.device_flashing_timer.start(3000)  # Start flashing each device after a delay of 3 seconds
 
     def flash_device(self):
-        if self.quantity_remaining > 0:
-            self.quantity_remaining -= 1
             id = self.process_single_device()
             QMessageBox.information(None, "Success", f"Device with id {id} was burnt successfully")
-        else:
-            self.device_flashing_timer.stop()  # Stop the timer when all devices are flashed
-            QMessageBox.information(None, "Success", "All devices were burnt successfully")
             
     def load_image(self):
         image_path = os.path.join(os.path.dirname(__file__), './header.png')
